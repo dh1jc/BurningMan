@@ -1,0 +1,21 @@
+name: BurningMan
+main: de.dh1jc.bukkit.BurningMan
+version: 0.1
+description: Burn man
+author: dh1jc
+commands:
+  burn:
+    description: Starts/Stops burning, man
+    usage: /burn {player}
+    permission: burningman.burn
+permissions:
+  burningman.burn:
+    default: false
+    description: Enables a player to burn...
+  burningman.other:
+    default: false
+    description: Enables a player to burn someone else...
+  burningman.ignoreduration:
+    default: false
+    description: Enables a player to burn forever...
+    
