@@ -1,6 +1,6 @@
 name: BurningMan
 main: de.dh1jc.bukkit.BurningMan
-version: 0.1
+version: 0.2
 description: Burn man
 author: dh1jc
 commands:

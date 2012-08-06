@@ -53,7 +53,7 @@ public class BurningMan extends JavaPlugin {
 					this.getServer().getPlayer(player).sendMessage(ChatColor.YELLOW + "You stopped burning.");
 				} else {
 					// register player to BURN!
-					this.BurningPlayers.put(player, this.getServer().getPlayer(sender.getName()).getLocation());
+					this.BurningPlayers.put(player, this.getServer().getPlayer(player).getLocation());
 					this.BurnDuration.put(player, this.getConfig().getInt("burningman.duration"));
 					this.getServer().getPlayer(player).sendMessage(ChatColor.YELLOW + "Burn...");
 				}				
