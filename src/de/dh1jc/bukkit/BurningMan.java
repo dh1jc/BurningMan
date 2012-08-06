@@ -34,11 +34,15 @@ public class BurningMan extends JavaPlugin {
 				if (args.length == 1) {
 					player = args[0];
 					if (sender.hasPermission("burningman.other")) {
-						if (this.getServer().getPlayer(player) != null) {								
-							sender.sendMessage(ChatColor.YELLOW + "You put the burn curse onto "+player);
+						if (this.getServer().getPlayer(player) != null) {
+							if (this.BurningPlayers.containsKey(player)) {
+								sender.sendMessage(ChatColor.YELLOW + "You removed the burn curse from "+player);
+							} else {
+								sender.sendMessage(ChatColor.YELLOW + "You put the burn curse onto "+player);	
+							}
 						} else {
 							sender.sendMessage(ChatColor.RED + "Players is not online.");
-							return false;
+							return true;
 						}
 					} else {
 						sender.sendMessage(ChatColor.RED + "You have no power to do that.");
